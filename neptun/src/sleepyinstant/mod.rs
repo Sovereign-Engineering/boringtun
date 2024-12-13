@@ -52,7 +52,7 @@ impl Instant {
     ///
     /// # Panics
     ///
-    /// panics when `earlier` was later than `self`.
+    /// Returns `Duration::ZERO` when `earlier` was later than `self`.
     pub fn duration_since(&self, earlier: Instant) -> Duration {
         self.t.duration_since(earlier.t)
     }
